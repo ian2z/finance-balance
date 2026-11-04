@@ -1,0 +1,21 @@
+# Banco PostgreSQL para desenvolvimento local (porta 5433 para não colidir com um Postgres do sistema).
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: financebalance-db
+    environment:
+      POSTGRES_DB: financebalance
+      POSTGRES_USER: financebalance
+      POSTGRES_PASSWORD: financebalance
+    ports:
+      - '127.0.0.1:5433:5432'
+    volumes:
+      - financebalance-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U financebalance -d financebalance']
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  financebalance-data:
