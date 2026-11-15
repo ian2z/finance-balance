@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "150441685777",
+    "project_id": "finance-balance-fc6f2",
+    "storage_bucket": "finance-balance-fc6f2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:150441685777:android:0276d480e01e7486f012b0",
+        "android_client_info": {
+          "package_name": "br.com.financebalance.mobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAizbrCrWCzVfnfLk7HTtYH0j-zMFxPoA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

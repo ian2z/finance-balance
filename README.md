@@ -1,12 +1,12 @@
 # Finance Balance
 
-Gestor de finanças pessoais. Backend único (Spring Boot) consumido pelo cliente web (React). O app mobile (Compose) é secundário e ainda não foi iniciado.
+Gestor de finanças pessoais. Backend único (Spring Boot) consumido pelo cliente web (React) e pelo aplicativo mobile Android (Jetpack Compose + Retrofit + Cloud Firestore).
 
 ```
 finance-balance/
 ├── backend/   # Spring Boot 4 + PostgreSQL + Flyway + JWT
 ├── web/       # React + TypeScript + Vite + Tailwind
-├── mobile/    # (futuro) Android / Jetpack Compose
+├── mobile/    # Android / Jetpack Compose + Material 3 + Retrofit + Cloud Firestore
 └── docs/      # escopo e módulos, design system
 ```
 

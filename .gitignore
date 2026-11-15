@@ -2,6 +2,10 @@
 node_modules/
 dist/
 target/
+mobile/.gradle/
+mobile/build/
+mobile/app/build/
+mobile/local.properties
 
 # Ambiente local e segredos
 .env
