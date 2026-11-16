@@ -230,20 +230,44 @@ fun AuthScreen(
                     modifier = Modifier.padding(top = 8.dp),
                     contentPadding = PaddingValues(16.dp)
                 ) {
+                    FieldLabel(texto = "ATALHOS RÁPIDOS DE SERVIDOR")
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        BotaoSecundario(
+                            texto = "Render (Nuvem)",
+                            onClick = {
+                                urlInput = "https://finance-balance-api.onrender.com/api/v1/"
+                                onSalvarApiUrl("https://finance-balance-api.onrender.com/api/v1/")
+                            },
+                            modifier = Modifier.weight(1f)
+                        )
+                        BotaoSecundario(
+                            texto = "Local (Emulador)",
+                            onClick = {
+                                urlInput = "http://10.0.2.2:8080/api/v1/"
+                                onSalvarApiUrl("http://10.0.2.2:8080/api/v1/")
+                            },
+                            modifier = Modifier.weight(1f)
+                        )
+                    }
+
+                    Spacer(Modifier.height(14.dp))
                     CampoFormulario(
-                        rotulo = "ENDEREÇO DA API",
+                        rotulo = "ENDEREÇO DA API PERSONALIZADO",
                         valor = urlInput,
                         onValorChange = { urlInput = it },
-                        placeholder = "http://10.0.2.2:8080/api/v1/"
+                        placeholder = "https://finance-balance-api.onrender.com/api/v1/"
                     )
-                    Spacer(Modifier.height(8.dp))
+                    Spacer(Modifier.height(6.dp))
                     Text(
-                        text = "Padrão no emulador: http://10.0.2.2:8080/api/v1/. Em celular físico, informe o IP local do computador na rede Wi-Fi.",
+                        text = "Alterne rapidamente entre Render em produção ou Localhost no emulador.",
                         style = MaterialTheme.typography.bodySmall,
                         color = TextSecondary
                     )
                     Spacer(Modifier.height(12.dp))
-                    BotaoSecundario(
+                    BotaoPrimario(
                         texto = "Salvar endereço",
                         onClick = {
                             onSalvarApiUrl(urlInput)
