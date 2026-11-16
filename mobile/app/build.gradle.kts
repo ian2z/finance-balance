@@ -17,7 +17,7 @@ android {
         versionName = "1.0.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField("String", "DEFAULT_API_URL", "\"http://10.0.2.2:8080/api/v1/\"")
+        buildConfigField("String", "DEFAULT_API_URL", "\"https://finance-balance-api.onrender.com/api/v1/\"")
     }
 
     buildTypes {
